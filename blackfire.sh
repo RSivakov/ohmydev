@@ -1,0 +1,1 @@
+# https://blackfire.io/docs/up-and-running/installation?action=install&mode=full&location=local&os=debian&language=php&agent=f6f50a71-079e-463b-a2f8-04abd913f50e
