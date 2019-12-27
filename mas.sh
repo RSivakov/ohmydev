@@ -9,6 +9,12 @@ brew install mas
 mas install 497799835 # XCode
 # sudo xcodebuild -license
 sudo xcodebuild -runFirstLaunch
+
+# Microsoft Office
+mas install 462054704 # Word
+mas install 462058435 # Excell
+mas install 462062816 # PowerPoint
+
 # mas install 1063631769 # Medis (1.0.3)
 # mas install 1135308344 # Plaiiin Jenkins Status (2.3.900)
 # mas install 1354318707 # Core Tunnel (1.8)
