@@ -6,14 +6,18 @@ brew install php
 
 #Установка Composer
 brew install composer
-composer global update
+COMPOSER_MEMORY_LIMIT=-1 composer global update
 echo "export PATH=~/.composer/vendor/bin:$PATH" >> ~/.zshrc
 
-composer global require "laravel/installer"
-composer global require "laravel-zero/installer"
-composer global require "laravel-zero/installer"
+COMPOSER_MEMORY_LIMIT=-1 composer global require "laravel/installer"
 
-composer global require laravel/envoy
+COMPOSER_MEMORY_LIMIT=-1 composer global require "laravel/lumen-installer"
+
+# https://laravel-zero.com/docs/build-a-standalone-application/cp
+COMPOSER_MEMORY_LIMIT=-1 composer global require "laravel-zero/installer"
+# https://github.com/humbug/box/blob/master/doc/configuration.md
+
+COMPOSER_MEMORY_LIMIT=-1 composer global require laravel/envoy
 
 # https://stitcher.io/
 
@@ -26,3 +30,6 @@ composer global require laravel/envoy
 
 
 # https://github.com/laravel-zero/laravel-zero
+# https://github.com/intonate/tinker-zero
+
+COMPOSER_MEMORY_LIMIT=-1 composer global require tightenco/lambo
