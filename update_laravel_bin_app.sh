@@ -1,7 +1,7 @@
-#rm ./bin/ohmydev
+#unlink ./bin/ohmydev
 cd ./src/ohmydev
 php ohmydev app:build -n
 cd ../..
 
-#rm ./bin/ohmydev
+unlink ./bin/ohmydev
 ln ./src/ohmydev/builds/ohmydev ./bin/ohmydev
