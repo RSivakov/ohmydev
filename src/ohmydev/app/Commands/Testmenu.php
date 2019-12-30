@@ -4,6 +4,7 @@ namespace App\Commands;
 
 use Illuminate\Console\Scheduling\Schedule;
 use LaravelZero\Framework\Commands\Command;
+use LaravelZero\Framework\Providers\GitVersion\GitVersionServiceProvider as Service;
 
 class Testmenu extends Command
 {
@@ -12,7 +13,7 @@ class Testmenu extends Command
      *
      * @var string
      */
-    protected $signature = 'testmenu';
+    protected $signature = 'init';
 
     /**
      * The description of the command.
@@ -44,6 +45,9 @@ class Testmenu extends Command
         $this->task("Doing something else", function () {
             return false;
         });
+
+        echo shell_exec('sh init_tests.sh');
+
     }
 
     /**
