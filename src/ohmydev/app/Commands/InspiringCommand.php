@@ -28,14 +28,7 @@ class InspiringCommand extends Command
      */
     public function handle()
     {
-        // $this->info('Simplicity is the ultimate sophistication.');
-        $option = $this->menu('Pizza menu', [
-            'Freshly baked muffins',
-            'Freshly baked croissants',
-            'Turnovers, crumb cake, cinnamon buns, scones',
-        ])->open();
-
-        $this->info("You have chosen the option number #$option");
+        $this->info('Simplicity is the ultimate sophistication.');
     }
 
     /**
