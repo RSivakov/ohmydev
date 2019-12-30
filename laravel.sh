@@ -1,9 +1,11 @@
 #!/bin/sh
 # Created by Roman Sivakov <romansivakov@gmail.com> for project OhMyDev
 
+#Пока нельзя включать, иначе зациклится
+#source development.sh
 
-source php.sh
-
+source composer.sh
+source valet.sh
 
 #Установка Composer
 brew install composer

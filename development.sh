@@ -1,10 +1,13 @@
 #!/bin/sh
 # Created by Roman Sivakov <romansivakov@gmail.com> for project OhMyDev
 
+source functions.sh
 
 
 
-brew cask install visual-studio-code
-brew cask install
-
-mas install 604825918 # Valentina Studio (9.6.2)
+source vscode.sh
+source laravel.sh
+source docker.sh
+source jenkins.sh
+source mysql.sh
+source homestead.sh
