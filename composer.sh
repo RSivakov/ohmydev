@@ -1,11 +1,30 @@
 #!/bin/sh
 # Created by Roman Sivakov <romansivakov@gmail.com> for project OhMyDev
 
-brew install php
-brew install composer
+source ./php.sh
+
+# //  Check for composer
+composer -v > /dev/null 2>&1
+COMPOSER=$?
+if [[ $COMPOSER -ne 0 ]]; then
+    echo 'Composer is not installed'
+    brew install composer
+else
+    echo 'Composer is installed'
+fi
+
+
+composerValidation() {
+    if type -t composer ; then #this part does not work
+        echo 'we have composer'
+    else
+        echo 'no composer?!'
+    fi
+}
+
 #curl -sS https://getcomposer.org/installer | php
 
-COMPOSER_MEMORY_LIMIT=-1 composer global update
+# COMPOSER_MEMORY_LIMIT=-1 composer global update
 
 # COMPOSER_MEMORY_LIMIT=-1 /usr/local/bin/composer global require composer/satis
 # COMPOSER_MEMORY_LIMIT=-1 /usr/local/bin/composer  global require playbloom/satisfy
@@ -42,6 +61,10 @@ COMPOSER_MEMORY_LIMIT=-1 composer global update
 
 export COMPOSER_MEMORY_LIMIT=-1
 which composer
-COMPOSER_MEMORY_LIMIT = -1 php /usr/local/bin/composer
+# COMPOSER_MEMORY_LIMIT = -1 php /usr/local/bin/composer
 
 # https://stackoverflow.com/questions/36107400/composer-update-memory-limit
+
+echo "export PATH=~/.composer/vendor/bin:$PATH" >> ~/.zshrc
+export PATH="~/.composer/vendor/bin:$PATH"
+source ~/.zshrc

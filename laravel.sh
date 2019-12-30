@@ -2,7 +2,8 @@
 # Created by Roman Sivakov <romansivakov@gmail.com> for project OhMyDev
 
 
-brew install php
+source php.sh
+
 
 #Установка Composer
 brew install composer
