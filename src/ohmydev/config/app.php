@@ -39,7 +39,7 @@ return [
     |
     */
 
-    'production' => false,
+    'production' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -54,6 +54,7 @@ return [
 
     'providers' => [
         App\Providers\AppServiceProvider::class,
+
     ],
 
 ];
