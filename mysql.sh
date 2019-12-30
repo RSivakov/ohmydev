@@ -1,0 +1,1 @@
+brew install mysql@5.7
