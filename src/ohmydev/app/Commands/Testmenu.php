@@ -30,23 +30,47 @@ class Testmenu extends Command
     public function handle()
     {
         //
-        $option = $this->menu('Pizza menu', [
-            'Freshly baked muffins',
-            'Freshly baked croissants',
-            'Turnovers, crumb cake, cinnamon buns, scones',
+        $option = $this->menu('Что сделаем?', [
+            '0 - Обновим бинарник',
+            '1 - Installing Laravel',
+            '2 - Doing something else',
+            '3 - Дернуть ссылку'
         ])->open();
 
-        $this->info("You have chosen the option number #$option");
 
-        $this->task("Installing Laravel", function () {
-            return true;
-        });
+        switch ($option) {
+            case 0:
+                echo shell_exec('cd ../../ && sh update_laravel_bin_app.sh');
+            break;
 
-        $this->task("Doing something else", function () {
-            return false;
-        });
+            case 1:
+                $this->task("Installing Laravel", function () {
+                    return true;
+                });
+            break;
 
-        echo shell_exec('sh init_tests.sh');
+            case 2:
+                $this->task("Doing something else", function () {
+                    return false;
+                });
+            break;
+
+            case 3:
+                $this->info("You have chosen the option number #$option");
+                $this->browse(function ($browser) {
+                    $browser->visit("https://laravel.com")
+                        ->assertSee("Laravel");
+                });
+            break;
+        }
+
+
+
+
+
+
+
+
 
     }
 
