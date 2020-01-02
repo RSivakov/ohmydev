@@ -31,3 +31,10 @@ source ~/.zshrc
 
 # https://kaek.readthedocs.io/ru/latest/labs/extra/zsh/
 # https://github.com/stefanzweifel/dotfiles
+source ./functions.sh
+
+if [! -d zsh]; then
+chsh -s /bin/zsh
+fi
+
+source ~/.zshrc

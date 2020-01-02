@@ -4,3 +4,5 @@
 # https://online.visualstudio.com/environments
 
 # https://code.visualstudio.com/docs/remote/linux
+
+brew cask install visual-studio-code

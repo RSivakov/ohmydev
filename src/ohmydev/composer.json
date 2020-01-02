@@ -11,13 +11,14 @@
     },
     "authors": [
         {
-            "name": "Nuno Maduro",
+            "name": "Roman Sivakovs",
             "email": "enunomaduro@gmail.com"
         }
     ],
     "require": {
         "php": "^7.2",
-        "laravel-zero/framework": "^6.0"
+        "laravel-zero/framework": "^6.0",
+        "nunomaduro/laravel-console-menu": "^2.1"
     },
     "require-dev": {
         "mockery/mockery": "^1.0",
