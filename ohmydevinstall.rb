@@ -1,8 +1,8 @@
 class OhmydevInstall < Formula
   desc "Установка всякой полезной хуйни для разработки"
   homepage "https://github.com/rsivakov/ohmydev"
-  url "https://github.com/RSivakov/ohmydev/archive/v0.1.1.zip"
-    sha256 "61fb04fbda6d58f43aeb0f6c7c4372d82888e8b90f4c862d10b561abf22bc108"
+  url "https://github.com/RSivakov/homebrew-ohmydev/archive/v0.1.2.zip"
+    sha256 "6c3f5a5a3211608ebf2aae23853e22334f23724b253b0b367ef8790854d35a1c"
    depends_on "docker"
    def install
     system "./configure", "--disable-debug",
