@@ -1,27 +1,27 @@
 class Ohmydev < Formula
   desc "Установка всякой полезной хуйни для разработки"
   homepage "https://github.com/rsivakov/ohmydev"
-  url "https://github.com/RSivakov/ohmydev/archive/v0.1.1.zip"
-    sha256 "61fb04fbda6d58f43aeb0f6c7c4372d82888e8b90f4c862d10b561abf22bc108"
+  url "https://github.com/RSivakov/homebrew-ohmydev/archive/v0.1.2.zip"
+    sha256 "6c3f5a5a3211608ebf2aae23853e22334f23724b253b0b367ef8790854d35a1c"
    depends_on "docker"
    def install
     system "./configure", "--disable-debug",
                           "--disable-dependency-tracking",
                           "--disable-silent-rules",
                           "--prefix=#{prefix}"
-   system "unzip ~/Library/Caches/Homebrew/sonm-64.zip  ~/Library/Caches/Homebrew/ -j"
-   system "cd /usr/local/Cellar/", "mv ./sonm_v0.3.0_darwin64 ./sonm"
-   system "mkdir ~/.sonm"
-   system "cp /usr/local/Cellar/sonm/cli/cli.yaml ~/.sonm/cli.yaml"
-   system "cp /usr/local/Cellar/sonm/hub/hub.yaml ~/.sonm/hub.yaml"
-   system "cp /usr/local/Cellar/sonm/node/node.yaml ~/.sonm/node.yaml"
-   system "cp /usr/local/Cellar/sonm/cli/worker.yaml ~/.sonm/worker.yaml"
+   system "unzip ~/Library/Caches/Homebrew/ohmydev--0.1.1.zip  /usr/local/Cellar -j"
+   system "cd /usr/local/Cellar/", "mv ./ohmydev--0.1.1 ./ohmydev"
+   system "mkdir ~/.ohmydev"
+   #system "cp /usr/local/Cellar/ohmydev/cli/cli.yaml ~/.sonm/cli.yaml"
+   #system "cp /usr/local/Cellar/sonm/hub/hub.yaml ~/.sonm/hub.yaml"
+   #system "cp /usr/local/Cellar/sonm/node/node.yaml ~/.sonm/node.yaml"
+   #system "cp /usr/local/Cellar/sonm/cli/worker.yaml ~/.sonm/worker.yaml"
 
 
 
 
    system "cd /usr/local", "ln -s bin"
-   #system "ln ./sonm/cli/sonmcli_darwin64 "
+   system "ln ./sonm/cli/sonmcli_darwin64 "
 
 
 end
