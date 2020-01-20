@@ -94,7 +94,7 @@ gpg-agent
 # boot2docker
 # bgnotify
 # branch
-cask
+# cask
 # chucknorris
 # colorize
 # common-aliases
@@ -209,6 +209,9 @@ source $ZSH/oh-my-zsh.sh
 source "$HOME/.zplugin/bin/zplugin.zsh"
 autoload -Uz _zplugin
 (( ${+_comps} )) && _comps[zplugin]=_zplugin
+
+eval "$(hub alias -s zsh)"
+source ~/.zplug/init.zsh
 ### End of Zplugin installer's chunk
 # source ~/.zplugin/bin/zplugin.zsh
 export GPG_AGENT_INFO="~/.gnupg/S.gpg-agent:$(pgrep gpg-agent):1"
@@ -234,7 +237,9 @@ export GPG_AGENT_INFO="~/.gnupg/S.gpg-agent:$(pgrep gpg-agent):1"
 #   echo $fish_gpg_cmd >$gpg_fish_file
 # end
 
-LIFE=28800
-export GPG_AGENT_INFO="~/.gnupg/S.gpg-agent:$(pgrep gpg-agent):1"
-eval `keychain --noask --eval --agents gpg,ssh --inherit any --timeout $LIFE id_rsa`
-export GPG_TTY=`tty`
+# LIFE=28800
+# export GPG_AGENT_INFO="~/.gnupg/S.gpg-agent:$(pgrep gpg-agent):1"
+# eval `keychain --noask --eval --agents gpg,ssh --inherit any --timeout $LIFE id_rsa`
+# export GPG_TTY=`tty`
+source /usr/local/share/antigen/antigen.zsh
+eval $(thefuck --alias)export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
