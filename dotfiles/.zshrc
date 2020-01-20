@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/rsivakov/.oh-my-zsh"
@@ -42,7 +42,7 @@ ZSH_THEME="robbyrussell"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -73,67 +73,68 @@ git
 brew
 vscode
 vagrant
-# themes
+themes
 sudo
 supervisor
 osx
 npm
 yarn
 composer
-# urltools
-# git-flow
+urltools
+git-flow
 gpg-agent
-# history
-# homestead
-# ansible
-# alias-finder
-# autoenv
-# autojump
-# aws
-# battery
-# boot2docker
-# bgnotify
-# branch
-# cask
-# chucknorris
-# colorize
-# common-aliases
-# compleat
-# dash
+history
+homestead
+ansible
+alias-finder
+autoenv
+autojump
+aws
+battery
+boot2docker
+bgnotify
+branch
+brew
+cask
+chucknorris
+colorize
+common-aliases
+compleat
+dash
 docker
 docker-compose
-# docker-machine
+docker-machine
 dotenv
-# emoji
-# emoji-clock
-# encode64
-# extract
-# flutter
-# frontend-search
-# copydir
-# cp
-# copyfile
+emoji
+emoji-clock
+encode64
+extract
+flutter
+frontend-search
+copydir
+cp
+copyfile
 git-auto-fetch
 git-extras
-# git-flow-avh
+git-flow-avh
 git-prompt
-# git-remote-branch
+git-remote-branch
 github
-# gitignore
+gitignore
 gulp
-# helm
+helm
 iterm2
-# jump
+jump
 jira
 jsontools
 keychain
 kubectl
-# lol
-# laravel
+lol
+laravel
 laravel5
 last-working-dir
-# man
-# marked2
+man
+marked2
 microk8s
 minikube
 mix
@@ -141,57 +142,66 @@ mosh
 nmap
 node
 npm
+osx
 pip
 postgres
-# pyenv
+pyenv
 python
-# rails
-# redis-cli
-# rsync
-# repo
-# ruby
-# salt
-# sdk
-# sudo
-# symfony
-# symfony2
-# systemadmin
-# supervisor
-# systemd
-# terraform
+rails
+redis-cli
+rsync
+repo
+ruby
+salt
+sdk
+sudo
+symfony
+symfony2
+systemadmin
+supervisor
+systemd
+terraform
 thefuck
-# themes
-# torrent
-# timer
-# transfer
-# vagrant-prompt
-# vi-mode
-# vim-interaction
+themes
+torrent
+timer
+transfer
+vagrant-prompt
+vi-mode
+vim-interaction
 virtualenv
-# virtualenvwrapper
-# wakeonlan
-# web-search
+virtualenvwrapper
+wakeonlan
+web-search
 xcode
 zsh-navigation-tools
 zsh_reload
-# kube-ps1
+kube-ps1
 )
+
+
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+fi
+
+
+
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# export MANPATH="/usr/local/man:$MANPATH"
+export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='mcedit'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -202,44 +212,22 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias zshconfig="mate ~/.zshrc"
+alias ohmyzsh="mate ~/.oh-my-zsh"
+export 'PATH=/Users/rsivakov/Code/ohmydev/bin:/Users/rsivakov/bin:/Users/rsivakov/.local/bin:/Users/rsivakov/.local/sbin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/Users/rsivakov/.ohmydev/bin:/Users/rsivakov/.composer/vendor/bin:/Users/rsivakov/.rvm/gems/ruby-2.6.3/bin:/Users/rsivakov/.rvm/gems/ruby-2.6.3@global/bin:/Users/rsivakov/.rvm/rubies/ruby-2.6.3/bin:/Library/Frameworks/Python.framework/Versions/3.8/bin:/usr/local/MacGPG2/bin:/Users/rsivakov/.rvm/bin:$PATH'
 
-### Added by Zplugin's installer
-source "$HOME/.zplugin/bin/zplugin.zsh"
-autoload -Uz _zplugin
-(( ${+_comps} )) && _comps[zplugin]=_zplugin
+eval $(thefuck --alias)
+
+source /usr/local/share/antigen/antigen.zsh
+# source /usr/local/opt/autoenv/activate.sh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# export ZPLUG_HOME=/usr/local/opt/zplug
+#source $ZPLUG_HOME/init.zsh
 
 eval "$(hub alias -s zsh)"
 source ~/.zplug/init.zsh
-### End of Zplugin installer's chunk
-# source ~/.zplugin/bin/zplugin.zsh
-export GPG_AGENT_INFO="~/.gnupg/S.gpg-agent:$(pgrep gpg-agent):1"
-# if status --is-interactive
-#   set -x GPG_AGENT_INFO
-#   set -x GPG_TTY (tty)
-#   set -x PINENTRY_USER_DATA "USE_CURSES=1"
-#   echo "UPDATESTARTUPTTY" | gpg-connect-agent >/dev/null 2>&1
-#   keychain --eval --noinherit --stop others --agents ssh,gpg id_rsa 7BXXX4D C0YYYYF0 | source
-#   set gpg_info $HOME"/.gnupg/S.gpg-agent:"(pidof gpg-agent)":1"
-#   set -x GPG_AGENT_INFO $gpg_info
 
-#   set sh_gpg_cmd "GPG_AGENT_INFO="$gpg_info"; export GPG_AGENT_INFO"
-#   set gpg_sh_file $HOME"/.keychain/"(hostname)"-sh-gpg"
-#   echo $sh_gpg_cmd >$gpg_sh_file
-
-#   set csh_gpg_cmd "setenv GPG_AGENT_INFO "$gpg_info
-#   set gpg_csh_file $HOME"/.keychain/"(hostname)"-csh-gpg"
-#   echo $csh_gpg_cmd >$gpg_csh_file
-
-#   set fish_gpg_cmd "set -e GPG_AGENT_INFO; set -x -U GPG_AGENT_INFO "$gpg_info
-#   set gpg_fish_file $HOME"/.keychain/"(hostname)"-fish-gpg"
-#   echo $fish_gpg_cmd >$gpg_fish_file
-# end
-
-# LIFE=28800
-# export GPG_AGENT_INFO="~/.gnupg/S.gpg-agent:$(pgrep gpg-agent):1"
-# eval `keychain --noask --eval --agents gpg,ssh --inherit any --timeout $LIFE id_rsa`
-# export GPG_TTY=`tty`
-source /usr/local/share/antigen/antigen.zsh
-eval $(thefuck --alias)export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+# zplug loads
