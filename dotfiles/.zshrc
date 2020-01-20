@@ -244,4 +244,5 @@ export GPG_AGENT_INFO="~/.gnupg/S.gpg-agent:$(pgrep gpg-agent):1"
 source /usr/local/share/antigen/antigen.zsh
 eval $(thefuck --alias)
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
-export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"# Add Visual Studio Code (code)
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
