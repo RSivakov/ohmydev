@@ -1,2 +1,22 @@
 #!/bin/sh
 # Created by Roman Sivakov <romansivakov@gmail.com> for project OhMyDev
+
+# $1 -v > /dev/null 2>&1
+
+# if [ $? -eq 0 ]; then
+#     echo "Package  is installed!"
+# else
+#     echo "Package  is NOT installed!"
+# fi
+# //  Check for composer
+hash $1 -v > /dev/null 2>&1
+COMPOSER=$?
+if [[ $COMPOSER -ne 0 ]]; then
+    # echo 'Composer is not installed'
+        echo 'We Already Have ' + $1
+    return TRUE
+else
+    # echo 'Composer is installed'
+        echo 'We Not Have ' + $1
+    return TRUE
+fi
