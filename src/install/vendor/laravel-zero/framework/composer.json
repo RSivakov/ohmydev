@@ -1,0 +1,86 @@
+{
+    "name": "laravel-zero/framework",
+    "description": "The Laravel Zero Framework.",
+    "keywords": ["framework", "laravel", "laravel zero", "console", "cli"],
+    "homepage": "https://laravel-zero.com",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/laravel-zero/laravel-zero/issues",
+        "source": "https://github.com/laravel-zero/laravel-zero"
+    },
+    "authors": [
+        {
+            "name": "Nuno Maduro",
+            "email": "enunomaduro@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "ext-json": "*",
+        "dragonmantank/cron-expression": "^2.0",
+        "illuminate/cache": "^6.0",
+        "illuminate/config": "^6.0",
+        "illuminate/console": "^6.0",
+        "illuminate/container": "^6.0",
+        "illuminate/contracts": "^6.0",
+        "illuminate/events": "^6.0",
+        "vlucas/phpdotenv": "^3.0",
+        "illuminate/filesystem": "^6.0",
+        "illuminate/support": "^6.0",
+        "laravel-zero/foundation": "^6.0",
+        "league/flysystem": "^1.0.8",
+        "nunomaduro/collision": "^3.0",
+        "nunomaduro/laravel-console-summary": "^1.2",
+        "nunomaduro/laravel-console-task": "^1.3",
+        "nunomaduro/laravel-desktop-notifier": "^2.2",
+        "psr/log": "^1.1",
+        "symfony/console": "^4.3",
+        "symfony/debug": "^4.3",
+        "symfony/process": "^4.3",
+        "symfony/var-dumper": "^4.3"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^0.11",
+        "phpunit/phpunit": "^8.0",
+        "vlucas/phpdotenv": "^3.0",
+        "illuminate/bus": "^6.0",
+        "illuminate/log": "^6.0",
+        "illuminate/queue": "^6.0",
+        "illuminate/database": "^6.0",
+        "padraic/phar-updater": "^1.0.6",
+        "zendframework/zend-text": "^2.7",
+        "nunomaduro/laravel-console-menu": "^2.2",
+        "nunomaduro/laravel-console-dusk": "^1.4",
+        "hmazter/laravel-schedule-list": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "LaravelZero\\Framework\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests",
+            "App\\": "tests/Application/app"
+        },
+        "classmap": [
+            "src/Components/Database/stubs"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "test:types": "phpstan analyse --ansi",
+        "test:unit": "phpunit --colors=always",
+        "test": [
+            "@test:types",
+            "@test:unit"
+        ]
+    },
+    "suggest": {
+        "ext-pcntl": "Required to ensure that data is cleared when cancelling the build process."
+    }
+}

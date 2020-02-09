@@ -1,3 +1,4 @@
-.folio
-install.rb.vscode
-.autogit
+/vendor
+/.idea
+/.vscode
+/.vagrant
