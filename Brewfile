@@ -114,6 +114,7 @@ mas "1Password 7", id: 1333542190
 mas "Adblock Plus", id: 1432731683
 mas "Base64 Image Encode", id: 748438902
 mas "Bash Prompt Designer", id: 1183085890
+mas "Buffer", id: 1474298973
 mas "Chmod Permissions", id: 1110163152
 mas "CleanMyDrive 2", id: 523620159
 mas "CloudStudio", id: 1210602819
@@ -136,13 +137,17 @@ mas "iBoysoft Data Recovery", id: 1003170604
 mas "iHosts", id: 1102004240
 mas "Instapaper", id: 1481302432
 mas "iStatistica", id: 1025822138
+mas "iTranslate", id: 884952790
 mas "Jira", id: 1475897096
+mas "Messenger", id: 1480068668
 mas "Microsoft Excel", id: 462058435
 mas "Microsoft PowerPoint", id: 462062816
 mas "Microsoft Word", id: 462054704
 mas "MPlayerX", id: 421131143
 mas "Notepad", id: 529763712
+mas "Raindrop.io for Safari", id: 957810159
 mas "Save to Dropbox for Safari", id: 1391693608
+mas "Save to Medium", id: 1485294824
 mas "Shazam", id: 897118787
 mas "Slack", id: 803453959
 mas "SnailGit Lite", id: 1099475282
@@ -150,7 +155,10 @@ mas "Spark", id: 1176895641
 mas "System Designer", id: 1102494854
 mas "Telegram", id: 747648890
 mas "Termius", id: 1176074088
+mas "The Unarchiver", id: 425424353
 mas "Valentina Studio", id: 604825918
 mas "WebSocket Client", id: 1399498094
 mas "WhatsApp", id: 1147396723
 mas "Xcode", id: 497799835
+mas "Xdebug Key", id: 1441712067
+mas "XDebugToggle", id: 1437227804
