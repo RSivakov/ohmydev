@@ -1,0 +1,43 @@
+{
+  "name": "ohmydev",
+  "version": "0.0.5",
+  "description": "<p align=\"center\"> Oh, my dev! </p>",
+  "main": "index.js",
+  "bin": {
+    "ohmydev": "./src/index.js"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Git",
+    "CLI"
+  ],
+  "author": "Roman Sivakov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RSivakov/ohmydev/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RSivakov/ohmydev.git"
+  },
+  "homepage": "https://github.com/RSivakov/ohmydev#readme",
+  "dependencies": {
+    "@octokit/auth-basic": "^1.4.7",
+    "@octokit/rest": "^18.0.9",
+    "chalk": "^4.1.0",
+    "clear": "^0.1.0",
+    "clui": "^0.3.6",
+    "configstore": "^5.0.1",
+    "figlet": "^1.5.0",
+    "inquirer": "^7.3.3",
+    "lodash": "^4.17.20",
+    "minimist": "^1.2.5",
+    "simple-git": "^2.22.0",
+    "touch": "^3.1.0"
+  }
+}
