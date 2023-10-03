@@ -244,7 +244,7 @@ unidiff==0.7.5
 update-checker==0.18.0
 uritemplate==4.1.1
 uritools==4.0.1
-urllib3==1.26.16
+urllib3==1.26.17
 urllib3-secure-extra==0.1.0
 vcrpy @ git+https://github.com/Significant-Gravitas/vcrpy.git@2f6fa05ae3518b1c0e92e63c3d12ecf5cf82cd48
 virtualenv==20.23.1
