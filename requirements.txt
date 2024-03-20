@@ -26,7 +26,7 @@ bc-jsonpath-ng==1.5.9
 bc-python-hcl2==0.3.51
 beautifulsoup4==4.12.2
 bitarray==2.7.5
-black==23.3.0
+black==24.3.0
 blessed==1.20.0
 blis==0.7.9
 boolean.py==4.0
